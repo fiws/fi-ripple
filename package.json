@@ -1,0 +1,28 @@
+{
+  "name": "fi-ripple",
+  "version": "0.1.0",
+  "description": "Performant ripples for vue or plain js",
+  "main": "dist/fi-ripple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "poi dev demo/index.js",
+    "build": "NODE_ENV=production poi build fi-ripple.js",
+    "build-demo": "NODE_ENV=demo poi build demo/index",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "ripple",
+    "browser",
+    "material",
+    "material design",
+    "vue",
+    "vue 2",
+    "directive"
+  ],
+  "author": "Filip Weiss <me@fiws.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "dom4": "^1.8.5"
+  }
+}

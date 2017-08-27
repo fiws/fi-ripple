@@ -1,0 +1,23 @@
+.fi-ripple-container{
+  position: relative;
+  overflow: hidden;
+  contain: content;
+  transform: translateZ(0);
+}
+
+.fi-ripple{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  -ms-transform: scale(0);
+  transform: scale(0) translateZ(0);
+  contain: strict;
+  will-change: opacity transform;
+  transition: 1600ms transform cubic-bezier(0.08, 0.81, 0.07, 1), 200ms opacity ease;
+  background-color: inherit;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
+}
