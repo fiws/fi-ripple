@@ -110,9 +110,9 @@ export class FiRipple {
     }, 0);
   }
   destroy() {
-    console.log('bye');
-    this.container.classList.remove('fi-ripple-container');
-    this.container.removeEventListener(this.spawnRipple);
+    // TODO: do we need to remove the class? (causes weird ripple positioning)
+    // this.container.classList.remove('fi-ripple-container');
+    this.container.removeEventListener('mousedown', this.spawnRipple);
   }
 }
 
