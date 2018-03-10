@@ -10,11 +10,11 @@ const px = n => n.toString() + 'px';
 const getOffset = (event, container) => {
   if (!event.target) return event;
   let target = event.target;
-  // poor mans "pointer-events: none" polyfill
-  const targetOk = target.isSameNode(container);
-  if (event.offsetX !== undefined && targetOk === true) {
+  if (event.offsetX !== undefined) {
     return { x: event.offsetX, y: event.offsetY };
   }
+  // poor mans "pointer-events: none" polyfill
+  const targetOk = target.isSameNode(container);
 
   while (!target.isSameNode(container)) {
     target = target.parentElement;
@@ -115,7 +115,6 @@ export class FiRipple {
     this.container.removeEventListener('mousedown', this.spawnRipple);
   }
 }
-
 
 export default {
   name: 'fi-ripple',

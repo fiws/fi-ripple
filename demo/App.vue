@@ -55,6 +55,15 @@ new FiRipple(rippleContainer);</pre>
       <h3>Container Demo</h3>
     </section>
 
+    <section class="fi-card demo-container no-select">
+      <h3>Scrollable Container</h3>
+      <div class="scrollable">
+        <div v-for="i in 20" :key="i" v-ripple class="btn">
+          <span>Long Button with Ripple</span>
+        </div>
+      </div>
+    </section>
+
     <section class="fi-card no-select">
       <button v-ripple @click="toggleClicking" class="btn">
         {{autoClick ? 'make it stahp': 'Start performance test'}}
@@ -141,12 +150,18 @@ export default {
 *{
   box-sizing: border-box;
 }
+
 .container{
   z-index: 50;
   height: 100%;
   width: 100%;
   border: 1px solid trasparent;
   background-color: rgba(0, 0, 0, 0.0);
+}
+
+.scrollable {
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 .btn{

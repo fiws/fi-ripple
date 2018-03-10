@@ -23,6 +23,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
-    "dom4": "^1.8.5"
+    "dom4": "^2.0.1",
+    "poi": "^9.6.13"
   }
 }
