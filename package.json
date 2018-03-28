@@ -1,6 +1,6 @@
 {
   "name": "fi-ripple",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Performant ripples for vue or plain js",
   "main": "dist/fi-ripple.js",
   "scripts": {
