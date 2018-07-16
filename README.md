@@ -4,7 +4,7 @@
 
 Install with `npm install fi-ripple`.
 
-You will also need to install `dom4` if you want IE 10 support.
+You will also need to install `dom4` if you want IE 10/11 support.
 
 ### With Vue
 
