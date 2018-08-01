@@ -10,25 +10,23 @@ const px = n => n.toString() + 'px';
 const getOffset = (event, container) => {
   if (!event.target) return event;
   let target = event.target;
-  if (event.offsetX !== undefined) {
+  
+  // direct click on the target
+  const targetOk = target.isSameNode(container);
+  if (event.offsetX !== undefined && targetOk) {
     return { x: event.offsetX, y: event.offsetY };
   }
-  // poor mans "pointer-events: none" polyfill
-  const targetOk = target.isSameNode(container);
 
-  while (!target.isSameNode(container)) {
-    target = target.parentElement;
-  }
-
+  // need to calculate the offset of the target
   const offset = { x: 0, y: 0 };
-  while(target.offsetParent) {
+  while(!target.isSameNode(container) && target.offsetParent) {
     offset.x += target.offsetLeft;
     offset.y += target.offsetTop;
     target = target.offsetParent;
   }
 
-  offset.x = event.pageX - offset.x;
-  offset.y = event.pageY - offset.y;
+  offset.x = event.offsetX + offset.x;
+  offset.y = event.offsetY + offset.y;
 
   return offset;
 }
