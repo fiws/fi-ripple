@@ -1,7 +1,7 @@
 {
   "name": "fi-ripple",
   "version": "0.1.7",
-  "description": "Performant ripples for vue or plain js",
+  "description": "Tiny no-dependencies ripple effect for plain js or vue",
   "main": "dist/fi-ripple.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

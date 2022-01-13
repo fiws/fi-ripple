@@ -1,5 +1,7 @@
 # fi-ripple
 
+Tiny (>4 KiB gzipped) no-dependencies ripple effect for plain js or vue.
+
 ## Usage
 
 Install with `npm install fi-ripple`.
