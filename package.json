@@ -21,6 +21,10 @@
   ],
   "author": "Filip Weiss <me@fiws.net>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiws/fi-ripple.git"
+  },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
     "dom4": "^2.0.1",
