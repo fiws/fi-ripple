@@ -6,11 +6,13 @@ Install with `npm install fi-ripple`.
 
 You will also need to install `dom4` if you want IE 10/11 support.
 
+The ripple inherits the color from css. To change it, modify the `color` css property on the container.
+
 ### With Vue
 
 ```js
-import 'dom4'; // for IE 10 support – import it once in your app entry
-import Ripple from '../fi-ripple.js'; // import the library
+import 'dom4'; // for IE (10+) support – import it once in your app entry
+import Ripple from 'fi-ripple.js'; // import the library
 
 export default {
   directives: {

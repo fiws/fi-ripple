@@ -37,7 +37,7 @@ const calcRadius = (c, maxSize) => {
 
 
 export class FiRipple {
-  constructor(el, opts = {}) {
+  constructor(el) {
     // default settings
     this.container = el;
     // prepare ripple container
@@ -73,7 +73,7 @@ export class FiRipple {
       });
     });
 
-    // programatic trigger
+    // programmatic trigger
     if (event instanceof MouseEvent !== true) {
       if (event.persistent !== true) this.removeRipple(ripple);
       return ripple;
@@ -116,7 +116,7 @@ export class FiRipple {
 
 export default {
   name: 'fi-ripple',
-  bind(el, binding, vnode) {
+  bind(el, binding) {
     el._fiRipple = new FiRipple(el);
   },
   update(el) {
