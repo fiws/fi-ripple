@@ -13,8 +13,9 @@ The ripple inherits the color from css. To change it, modify the `color` css pro
 ### With Vue
 
 ```js
-import 'dom4'; // for IE (10+) support – import it once in your app entry
-import Ripple from 'fi-ripple.js'; // import the library
+// dom4 is only needed for IE (10+) support – import it once
+import 'dom4';
+import Ripple from 'fi-ripple';
 
 export default {
   directives: {
